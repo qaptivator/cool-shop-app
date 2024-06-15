@@ -15,45 +15,56 @@
     <title>Cool Shop</title>
   </head>
   <body>
-    <!-- Нижче має бути твій код 😀 -->
-    <!-- Твій код повинен бути в межах блоку body -->
-    <!-- <body> - це початок блоку, </body > - це кінець блоку -->
-    <header>
-      <!-- Тут в блоці header потрібно створити "шапку" сайту -->
-
-      <!-- Іконка меню -->
-      <svg class="icon-menu">
+    <!-- the navbar -->
+    <header class="header-bar p-2 flex">
+      <svg class="icon-menu mr-4">
         <use href="./images/sprite.svg#icon-menu" />
       </svg>
 
-      <!-- Іконка пошуку -->
-      <i class="fa-solid fa-magnifying-glass"></i>
+      <h1 class="barrio-regular mr-4">COOL SHOP</h1>
 
-      <!-- Іконка сердечко -->
-      <svg class="icon-favorite-light">
+      <form action="search" class="search-form p-2">
+        <input
+          class="search-form-input mr-4 flex-grow"
+          placeholder="Search..."
+          id="query"
+          name="query"
+          type="text"
+        />
+        <button type="submit" class="search-form-button">
+          <i class="fa-solid fa-magnifying-glass icon-search"></i>
+        </button>
+      </form>
+
+      <div class="flex-grow"></div>
+
+      <h4>EN | UA</h4>
+
+      <svg class="icon-favorite-light ml-4">
         <use href="./images/sprite.svg#icon-favorite-light" />
       </svg>
 
-      <!-- Іконка корзина -->
-      <svg class="icon-basket">
+      <svg class="icon-basket ml-4">
         <use href="./images/sprite.svg#icon-basket" />
       </svg>
     </header>
-    <main>
-      <!-- Тут в блоці main потрібно розмістити основний контент сторінки -->
+    <!-- the body -->
+    <main class="flex">
+      <!-- the menu -->
+      <div class="menu-sidebar">hello</div>
 
-      <!-- Список видів товарів -->
-      <section></section>
+      <!-- the rest -->
+      <div class="flex flex-grow flex-column">
+        <!-- the ad -->
+        <div></div>
 
-      <!-- Секція з рекламою -->
-      <section></section>
-
-      <!-- Секція "Популярні" -->
-      <section>
-        <svg class="icon-favorite-dark">
-          <use href="./images/sprite.svg#icon-favorite-dark" />
-        </svg>
-      </section>
+        <!-- the products -->
+        <div>
+          <svg class="icon-favorite-dark">
+            <use href="./images/sprite.svg#icon-favorite-dark" />
+          </svg>
+        </div>
+      </div>
     </main>
 
     <script
