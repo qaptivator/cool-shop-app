@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Cool Shop</title>
   </head>
-  <body>
+  <body class="h-screen flex flex-column">
     <!-- the navbar -->
-    <header class="header-bar p-2 flex">
+    <header class="header-bar flex">
       <svg class="icon-menu mr-4">
         <use href="./images/sprite.svg#icon-menu" />
       </svg>
@@ -49,20 +49,73 @@
       </svg>
     </header>
     <!-- the body -->
-    <main class="flex">
+    <main class="flex flex-grow">
       <!-- the menu -->
-      <div class="menu-sidebar">hello</div>
+      <div class="menu-sidebar">
+        Техніка<br />
+        Інструменти<br />
+        Меблі<br />
+        Сантехніка<br />
+        Спорт<br />
+        Одяг<br />
+        Косметика<br />
+        Іграшки
+      </div>
 
       <!-- the rest -->
-      <div class="flex flex-grow flex-column">
+      <div class="flex flex-grow flex-column padded-container">
         <!-- the ad -->
-        <div></div>
+        <div class="ad-container">
+          <img class="ad-image" src="./images/tennis.jpg" />
+          <!--<div class="ad-button">h</div>-->
+          <div class="ad-text">
+            Знижки<br />
+            на спортивні товари<br />
+            <b>до 50%</b><br />
+            на все <b>ЛІТО</b>
+          </div>
+        </div>
 
         <!-- the products -->
-        <div>
-          <svg class="icon-favorite-dark">
+        <div class="mt-6">
+          <b>Популярні</b>
+          <div class="flex w-full space-x-4 mt-4">
+            <div class="product-card space-y-2">
+              <svg class="icon-favorite-dark product-favorite">
+                <use href="./images/sprite.svg#icon-favorite-dark" />
+              </svg>
+              <img class="product-image" src="./images/blender.jpg" />
+              <label class="product-name">Блендер</label>
+              <label class="product-price">900 грн.</label>
+            </div>
+            <div class="product-card space-y-2">
+              <svg class="icon-favorite-dark product-favorite">
+                <use href="./images/sprite.svg#icon-favorite-dark" />
+              </svg>
+              <img class="product-image" src="./images/ball.jpg" />
+              <label class="product-name">Волейбольний м’яч</label>
+              <label class="product-price">1000 грн.</label>
+            </div>
+            <div class="product-card space-y-2">
+              <svg class="icon-favorite-dark product-favorite">
+                <use href="./images/sprite.svg#icon-favorite-dark" />
+              </svg>
+              <img class="product-image" src="./images/t-shirt.jpg" />
+              <label class="product-name">Футболка</label>
+              <label class="product-price">300 грн.</label>
+            </div>
+            <div class="product-card space-y-2">
+              <svg class="icon-favorite-dark product-favorite">
+                <use href="./images/sprite.svg#icon-favorite-dark" />
+              </svg>
+              <img class="product-image" src="./images/toy.jpg" />
+              <label class="product-name">Іграшка автомобіль</label>
+              <label class="product-price">900 грн.</label>
+            </div>
+          </div>
+          <!--<svg class="icon-favorite-dark product-favorite">
             <use href="./images/sprite.svg#icon-favorite-dark" />
-          </svg>
+          </svg>-->
         </div>
       </div>
     </main>
