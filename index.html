@@ -38,7 +38,15 @@
 
       <div class="flex-grow"></div>
 
+      <!-- --------------------------------1---------------------------------- -->
+      <!-- Перемикач мови можна зробити ще так (щоб потім за допомогою js реалізувати перемикання по кліках на елемент "EN" або "UA") -->
+      <!-- <div>
+        <button type="button">EN</button>
+        <span>|</span>
+        <button type="button">UA</button>
+      </div> -->
       <h4>EN | UA</h4>
+      <!-- --------------------------------1---------------------------------- -->
 
       <svg class="icon-favorite-light ml-4">
         <use href="./images/sprite.svg#icon-favorite-light" />
@@ -48,8 +56,22 @@
         <use href="./images/sprite.svg#icon-basket" />
       </svg>
     </header>
+
     <!-- the body -->
     <main class="flex flex-grow">
+      <!-- ------------------------------2------------------------------------ -->
+      <!-- Колекцію подібних елементів краще відобразити як список -->
+      <!-- <ul class="menu-sidebar">
+        <li>Техніка</li>
+        <li>Інструменти</li>
+        <li>Меблі</li>
+        <li>Сантехніка</li>
+        <li>Спорт</li>
+        <li>Одяг</li>
+        <li>Косметика</li>
+        <li>Іграшки</li>
+      </ul> -->
+
       <!-- the menu -->
       <div class="menu-sidebar">
         Техніка<br />
@@ -61,6 +83,12 @@
         Косметика<br />
         Іграшки
       </div>
+      <!-- -------------------------------2----------------------------------- -->
+
+      <!-- -------------------------------3----------------------------------- -->
+      <!-- Зображення повинно бути фонове, а не контентне -->
+      <!-- Тобто додай його як фон в стилях для .ad-container -->
+      <!-- І видаль звідси едемент img -->
 
       <!-- the rest -->
       <div class="flex flex-grow flex-column padded-container">
@@ -75,16 +103,77 @@
             на все <b>ЛІТО</b>
           </div>
         </div>
+        <!-- -------------------------------3----------------------------------- -->
+
+        <!-- -------------------------------4----------------------------------- -->
+
+        <!-- Рекомендовано замість тегу <b> використовувати інші способи -->
+        <!-- Глянь тут рекомендацію, де Tips and Notes -> https://www.w3schools.com/tags/tag_b.asp  -->
+        <!-- Краще зробити верстку більш семантичною. Замість div використовувати більш підходящі теги -->
+        <!-- Семантична верстка допомагає скрін-рідерам правильно читати сайт -->
+        <!-- Cкрін-рідерами користуються люди з обмеженими можливостями -->
+        <!-- Також семантична верстка допоможе підняти сайт в списку результатів пошуку -->
+        <!-- https://www.w3schools.com/html/html5_semantic_elements.asp -->
+        <!-- Не потрібно в даному випадку переносити текст за допомогою br -->
+        <!-- Краще задати контейнеру, в якому знаходиться текст, відповідні ширину і висоту, як в макеті -->
+        <!-- І нехай текст розміститься автоматично, відповідно до розмірів контейнера -->
+        <!-- Результат: -->
+        <!-- <p class="ad-text">
+          Знижки на спортивні товари <span class="bold">до 50%</span> на все
+          <span class="bold">ЛІТО</span>
+        </p> -->
+        <!-- -------------------------------4----------------------------------- -->
+
+        <!-- -------------------------------5----------------------------------- -->
+        <!-- Тут теж краще картки з товарами зробити списком -->
+        <!-- <ul class="flex w-full space-x-4 mt-4">
+          <li class="product-card space-y-2">
+            <svg class="icon-favorite-dark product-favorite">
+              <use href="./images/sprite.svg#icon-favorite-dark" />
+            </svg>
+            <img class="product-image" src="./images/blender.jpg" />
+            <p class="product-name">Блендер</p>
+            <p class="product-price">900 грн.</p>
+          </li>
+          <li class="product-card space-y-2">
+            <svg class="icon-favorite-dark product-favorite">
+              <use href="./images/sprite.svg#icon-favorite-dark" />
+            </svg>
+            <img class="product-image" src="./images/ball.jpg" />
+            <p class="product-name">Волейбольний м’яч</p>
+            <p class="product-price">1000 грн.</p>
+          </li>
+          <li class="product-card space-y-2">
+            <svg class="icon-favorite-dark product-favorite">
+              <use href="./images/sprite.svg#icon-favorite-dark" />
+            </svg>
+            <img class="product-image" src="./images/t-shirt.jpg" />
+            <p class="product-name">Футболка</p>
+            <p class="product-price">300 грн.</p>
+          </li>
+          <li class="product-card space-y-2">
+            <svg class="icon-favorite-dark product-favorite">
+              <use href="./images/sprite.svg#icon-favorite-dark" />
+            </svg>
+            <img class="product-image" src="./images/toy.jpg" />
+            <p class="product-name">Іграшка автомобіль</p>
+            <p class="product-price">900 грн.</p>
+          </li>
+        </ul> -->
 
         <!-- the products -->
         <div class="mt-6">
+          <!-- Заголовок розділу краще написати так: -->
+          <!-- <h2 class="bold">Популярні</h2> -->
           <b>Популярні</b>
+
           <div class="flex w-full space-x-4 mt-4">
             <div class="product-card space-y-2">
               <svg class="icon-favorite-dark product-favorite">
                 <use href="./images/sprite.svg#icon-favorite-dark" />
               </svg>
               <img class="product-image" src="./images/blender.jpg" />
+              <!-- label використовується для input, тому тут краще просто тег параграфу <p> -->
               <label class="product-name">Блендер</label>
               <label class="product-price">900 грн.</label>
             </div>
@@ -117,6 +206,7 @@
             <use href="./images/sprite.svg#icon-favorite-dark" />
           </svg>-->
         </div>
+        <!-- -------------------------------5----------------------------------- -->
       </div>
     </main>
 
