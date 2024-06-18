@@ -12,6 +12,11 @@
   );
 }
 
+.icon-menu-button {
+  border: 0px;
+  background-color: transparent;
+}
+
 .icon-menu {
   width: 28px;
   height: 20px;
@@ -65,26 +70,6 @@
   height: 38px;
 }
 
-/* --------------------------------1---------------------------------- */
-
-/* --------------------------------2---------------------------------- */
-/* Ці універсальні стилі можна винести в окремий файл */
-/* Наприклад в index.css - вже є в папці css, додай нижче свої стилі */
-
-/* --------------------------------2---------------------------------- */
-
-/* --------------------------------3---------------------------------- */
-/* Замість border-width: 0px; потрібно border: 1px solid white; */
-/* Бо на макеті є border товщиною 1px, нерозривною смужкою - solid, і білого кольору - тому white */
-/* І перемісти ці стилі перед .icon-search */
-
-/* --------------------------------3---------------------------------- */
-
-/* --------------------------------4---------------------------------- */
-/* Зміни колір кнопки - на background-color: white; */
-
-/* --------------------------------4---------------------------------- */
-
 /* --------- MAIN ---------*/
 
 /* --- MENU --- */
@@ -94,6 +79,15 @@
   border-color: black;
   border-right: 1px solid;
   padding: 1.5rem;
+  transition-property: margin;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.closed-sidebar {
+  margin-left: -200px;
+  /*height: 100%;*/
+  /*transform: translateX(-100%);*/
 }
 
 /* --- AD --- */
@@ -106,20 +100,6 @@
   /*align-items: center;*/
   position: relative;
 }
-
-/* --------------------------------4---------------------------------- */
-/* Додай фонове зображення */
-/* background-image: url(/images/tennis.jpg); */
-
-/* Вирівнях фонове зображення */
-/* background-position: center; */
-/* background-size: cover; */
-
-/* Зелений прямокутник з текстом краще вирівняти за допомогою flex */
-/* padding-right: 60px;
-display: flex;
-justify-content: end;
-align-items: center; */
 
 .ad-container {
   background-image: url(/images/tennis.jpg);
