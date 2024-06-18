@@ -1,35 +1,4 @@
 /* --------- HEADER ---------*/
-.icon-menu {
-  width: 28px;
-  height: 20px;
-}
-
-.icon-search {
-  width: 18px;
-  height: 17px;
-  color: black;
-  /*background-color: #ffffff;*/
-}
-
-.icon-favorite-light {
-  width: 36px;
-  height: 32px;
-}
-
-.icon-basket {
-  width: 40px;
-  height: 38px;
-}
-
-.barrio-regular {
-  font-family: 'Barrio', system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* --------------------------------1---------------------------------- */
-/* Стилі краще прописувати в тому ж порядку, що й елементи в html файлі */
-/* Тобто header-bar перемістити на початок - перед icon-menu */
 .header-bar {
   /*justify-content: center;*/
   align-items: center;
@@ -42,51 +11,17 @@
     rgba(199, 108, 255, 1) 100%
   );
 }
-/* --------------------------------1---------------------------------- */
 
-/* --------------------------------2---------------------------------- */
-/* Ці універсальні стилі можна винести в окремий файл */
-/* Наприклад в index.css - вже є в папці css, додай нижче свої стилі */
-.flex {
-  display: flex;
+.icon-menu {
+  width: 28px;
+  height: 20px;
 }
 
-.p-2 {
-  padding: 0.5rem;
+.barrio-regular {
+  font-family: 'Barrio', system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
-
-.p-4 {
-  padding: 1rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
-}
-
-.mr-4 {
-  margin-right: 1rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.flex-grow {
-  flex-grow: 1;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-/* --------------------------------2---------------------------------- */
 
 .search-form {
   border-radius: 0.5rem;
@@ -94,52 +29,74 @@
   background: #eeeeee;
 }
 
-/* --------------------------------3---------------------------------- */
-/* Замість border-width: 0px; потрібно border: 1px solid white; */
-/* Бо на макеті є border товщиною 1px, нерозривною смужкою - solid, і білого кольору - тому white */
-/* І перемісти ці стилі перед .icon-search */
 .search-form-input {
   background: transparent;
-  border-width: 0px;
+  border: 1px solid white;
 }
-/* --------------------------------3---------------------------------- */
 
-/* --------------------------------4---------------------------------- */
-/* Зміни колір кнопки - на background-color: white; */
 .search-form-button {
-  background: transparent;
+  background-color: white;
   border-width: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Молодець, що відцентрував іконку 🔍 */
 }
+
+.icon-search {
+  width: 18px;
+  height: 17px;
+  color: black;
+  /*background-color: #ffffff;*/
+}
+
+.lang-switch-button {
+  color: white;
+  border: 0px;
+  background: transparent;
+}
+
+.icon-favorite-light {
+  width: 36px;
+  height: 32px;
+}
+
+.icon-basket {
+  width: 40px;
+  height: 38px;
+}
+
+/* --------------------------------1---------------------------------- */
+
+/* --------------------------------2---------------------------------- */
+/* Ці універсальні стилі можна винести в окремий файл */
+/* Наприклад в index.css - вже є в папці css, додай нижче свої стилі */
+
+/* --------------------------------2---------------------------------- */
+
+/* --------------------------------3---------------------------------- */
+/* Замість border-width: 0px; потрібно border: 1px solid white; */
+/* Бо на макеті є border товщиною 1px, нерозривною смужкою - solid, і білого кольору - тому white */
+/* І перемісти ці стилі перед .icon-search */
+
+/* --------------------------------3---------------------------------- */
+
+/* --------------------------------4---------------------------------- */
+/* Зміни колір кнопки - на background-color: white; */
+
 /* --------------------------------4---------------------------------- */
 
-.flex-column {
-  flex-direction: column;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
 /* --------- MAIN ---------*/
-/* --- Види товарів --- */
+
+/* --- MENU --- */
+
 .menu-sidebar {
   height: 100%;
   border-color: black;
   border-right: 1px solid;
   padding: 1.5rem;
 }
+
+/* --- AD --- */
 
 .padded-container {
   width: 100%;
@@ -149,8 +106,6 @@
   /*align-items: center;*/
   position: relative;
 }
-
-/* --- Реклама --- */
 
 /* --------------------------------4---------------------------------- */
 /* Додай фонове зображення */
@@ -167,28 +122,31 @@ justify-content: end;
 align-items: center; */
 
 .ad-container {
-  width: 100%;
-  /* position: relative; */
-}
-/* --------------------------------4---------------------------------- */
-
-.ad-image {
-  object-fit: cover;
-  width: 100%;
-  height: 200px;
+  background-image: url(/images/tennis.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 1.5rem;
 }
 
 .ad-text {
-  position: absolute;
+  padding-right: 60px;
   background-color: #c3c943;
   color: white;
-  /* top: 30px; */
-  /* left: 700px; */
-  width: 300px;
-  height: 150px;
+  /* 312 x 204 */
+  width: 312px;
+  /*height: 150px;*/
   border-radius: 0.5rem;
-  padding: 1rem;
-  font-size: larger;
+  padding: 1.5rem;
+  font-size: x-large;
+}
+
+/*.ad-image {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
 }
 
 .ad-button {
@@ -197,13 +155,9 @@ align-items: center; */
   border-radius: 100%;
   background-color: #00af8f;
   color: white;
-}
+}*/
 
-/* --- Популярні --- */
-.icon-favorite-dark {
-  width: 27px;
-  height: 24px;
-}
+/* --- POPULAR --- */
 
 .product-card {
   background-color: #f0f0f0;
@@ -232,6 +186,11 @@ align-items: center; */
   right: 10px;
 }
 
+.icon-favorite-dark {
+  width: 27px;
+  height: 24px;
+}
+
 .product-name {
   text-align: center;
   font-size: medium;
@@ -241,12 +200,4 @@ align-items: center; */
   text-align: center;
   font-size: small;
   color: #ff7a00;
-}
-
-.space-x-4 > * + * {
-  margin-left: 1rem;
-}
-
-.space-y-2 > * + * {
-  margin-top: 0.5rem;
 }
