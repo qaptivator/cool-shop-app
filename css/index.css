@@ -10,6 +10,7 @@
   --text-color-light: #fff;
   --price-color: #ff7a00;
   --logo-font: 'Barrio', system-ui;
+  --sidebar-width: 15%;
 }
 
 p,
@@ -120,6 +121,7 @@ body {
   font-weight: 700;
 }
 
+/* selects everything, except the last element */
 .space-x-4 > * + * {
   margin-left: 1rem;
 }
