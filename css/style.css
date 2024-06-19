@@ -6,11 +6,6 @@
   padding: 0.5rem;
   background: rgb(0, 175, 143);
   background: var(--header-gradient);
-  /*linear-gradient(
-    90deg,
-    rgba(0, 175, 143, 1) 0%,
-    rgba(199, 108, 255, 1) 100%
-  );*/
 }
 
 .icon-menu-button {
@@ -84,7 +79,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   width: var(--sidebar-width);
-  display: block;
 }
 
 .closed-sidebar {
